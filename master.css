@@ -70,6 +70,7 @@ tbody td input{
   border: none;
 }
 
+
 tbody td .checked {
   display: none;
 }
@@ -78,6 +79,8 @@ tbody .wave,
 tbody .freq {
   min-width: 230px;
 }
+
+
 
 tbody .wave input,
 tbody .freq input {
@@ -114,4 +117,37 @@ tbody .freq span {
 
 .bottons div:hover {
   background-color: #0472c9;
+}
+
+@media (max-width: 767px) {
+  h2 {
+    font-size: 20px;
+  }
+  tbody .wave,
+  tbody .freq {
+    min-width: 70px;
+  }
+  input {
+    width: 100%;
+  }
+  tbody .wave input, tbody .freq input {
+    width: 25.36px;
+  }
+  thead td {
+    font-size: 12px;
+    padding: 2px;
+  }
+  tbody .wave span, tbody .freq span {
+    font-size: 9px;
+  }
+  tbody td .checked {
+    font-size: 12px;
+  }
+  table {
+    margin: 50px 15px;
+  }
+  .bottons {
+    font-size: 12px;
+    text-align: center;
+  }
 }
