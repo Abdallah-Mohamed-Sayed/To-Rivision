@@ -1,0 +1,117 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
+h2 {
+  background-color: #0585eb;
+  color: white;
+  text-align: center;
+  padding: 10px;
+}
+
+table {
+  margin: 50px auto;
+  border-spacing: 2px;
+  background-color: rgb(108, 108, 108);
+}
+
+thead {
+  position: sticky;
+  top: -1px;
+}
+
+thead td {
+  text-align: center;
+  font-weight: bold;
+  padding: 5px 10px;
+  background-color: white;
+}
+
+tbody td {
+  background-color: #c3c3c3;
+}
+
+tbody td .checked div {
+  padding: 5px 10px;
+}
+
+tbody td .checked span {
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+  user-select: none;
+  display: none;
+}
+
+tbody td .checked span:first-of-type {
+  color: green;
+}
+tbody td .checked span:last-of-type {
+  color: red;
+}
+
+tbody td .checked div.answer {
+  font-weight: bold;
+}
+
+tbody td .inputed {
+  font-size: 12px;
+}
+
+tbody td input{
+  padding: 5px 15px;
+  outline-color: #0585eb;
+  border: none;
+}
+
+tbody td .checked {
+  display: none;
+}
+
+tbody .wave,
+tbody .freq {
+  min-width: 230px;
+}
+
+tbody .wave input,
+tbody .freq input {
+  width: 103.36px;
+  padding: 5px;
+}
+
+tbody .wave span,
+tbody .freq span {
+  font-size: 13px;
+  user-select: none;
+}
+
+.bottons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  position: sticky;
+  bottom: 0;
+  background-color: white;
+  margin-bottom: 50px;
+  padding: 10px 0;
+}
+
+.bottons div {
+  background-color: #0585eb;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 6px;
+  user-select: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.bottons div:hover {
+  background-color: #0472c9;
+}
