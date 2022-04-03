@@ -44,9 +44,13 @@ checkBtn.onclick = function () {
               });
             }
             if (
-              document.querySelector(
-                `.band .answer[data-order="${input.dataset.order}"]`
-              ).textContent == input.value
+              document
+                .querySelector(
+                  `.band .answer[data-order="${input.dataset.order}"]`
+                )
+                .textContent.toLowerCase()
+                .split(" ")
+                .join("") == input.value.toLowerCase().split(" ").join("")
             ) {
               document.querySelector(
                 `.band .answer[data-order="${input.dataset.order}"]`
@@ -84,9 +88,13 @@ checkBtn.onclick = function () {
               });
             }
             if (
-              document.querySelector(
-                `.freq .answer[data-order="${input.dataset.order}"]`
-              ).textContent == input.value
+              document
+                .querySelector(
+                  `.freq .answer[data-order="${input.dataset.order}"]`
+                )
+                .textContent.toLowerCase()
+                .split(" ")
+                .join("") == input.value.toLowerCase().split(" ").join("")
             ) {
               document.querySelector(
                 `.freq .answer[data-order="${input.dataset.order}"]`
@@ -124,9 +132,13 @@ checkBtn.onclick = function () {
               });
             }
             if (
-              document.querySelector(
-                `.wave .answer[data-order="${input.dataset.order}"]`
-              ).textContent == input.value
+              document
+                .querySelector(
+                  `.wave .answer[data-order="${input.dataset.order}"]`
+                )
+                .textContent.toLowerCase()
+                .split(" ")
+                .join("") == input.value.toLowerCase().split(" ").join("")
             ) {
               document.querySelector(
                 `.wave .answer[data-order="${input.dataset.order}"]`
@@ -164,9 +176,13 @@ checkBtn.onclick = function () {
               });
             }
             if (
-              document.querySelector(
-                `.app .answer[data-order="${input.dataset.order}"]`
-              ).textContent == input.value
+              document
+                .querySelector(
+                  `.app .answer[data-order="${input.dataset.order}"]`
+                )
+                .textContent.toLowerCase()
+                .split(" ")
+                .join("") == input.value.toLowerCase().split(" ").join("")
             ) {
               document.querySelector(
                 `.app .answer[data-order="${input.dataset.order}"]`
@@ -211,6 +227,14 @@ showBtn.onclick = function () {
 clearBtn.onclick = function () {
   everyCell.forEach((cell) => {
     cell.value = "";
+  });
+  let allTrFa = document.querySelectorAll(".right , .wrong");
+  let inputed = document.querySelectorAll(".inputed");
+  inputed.forEach((input) => {
+    input.innerHTML = "";
+  });
+  allTrFa.forEach((trFa) => {
+    trFa.style.display = "none";
   });
   allInputs.forEach((input) => {
     if (input.style.display == "none") {

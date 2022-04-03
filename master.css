@@ -19,6 +19,7 @@ table {
   margin: 50px auto;
   border-spacing: 2px;
   background-color: rgb(108, 108, 108);
+  position: relative;
 }
 
 thead {
@@ -39,6 +40,8 @@ tbody td {
 
 tbody td .checked div {
   padding: 5px 10px;
+  overflow: auto;
+  max-width: 220px;
 }
 
 tbody td .checked span {
@@ -119,6 +122,48 @@ tbody .freq span {
   background-color: #0472c9;
 }
 
+@media (max-width: 991px) {
+  tbody td input:focus {
+    transform: translateX(-50%);
+    position: absolute;
+    z-index : 2;
+    top: -40px;
+    left: 50%;
+    width: 200px;
+    font-size: 20px;
+  }
+  h2 {
+    font-size: 20px;
+  }
+  tbody .wave,
+  tbody .freq {
+    min-width: 70px;
+  }
+  input {
+    width: 100%;
+  }
+  tbody .wave input, tbody .freq input {
+    width: 25.36px;
+  }
+  thead td {
+    font-size: 12px;
+    padding: 2px;
+  }
+  tbody .wave span, tbody .freq span {
+    font-size: 9px;
+  }
+  tbody td .checked {
+    font-size: 12px;
+  }
+  table {
+    margin: 50px auto;
+  }
+  .bottons {
+    font-size: 12px;
+    text-align: center;
+  }
+}
+
 @media (max-width: 767px) {
   h2 {
     font-size: 20px;
@@ -139,6 +184,9 @@ tbody .freq span {
   }
   tbody .wave span, tbody .freq span {
     font-size: 9px;
+  }
+  tbody td .checked div {
+    max-width: 95px;
   }
   tbody td .checked {
     font-size: 12px;
