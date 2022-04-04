@@ -6,6 +6,9 @@
 
 body {
   font-family: "Open Sans", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 h2 {
@@ -13,6 +16,7 @@ h2 {
   color: white;
   text-align: center;
   padding: 10px;
+  width: 100%;
 }
 
 table {
@@ -55,7 +59,7 @@ tbody td .checked span {
 tbody td .checked span:first-of-type {
   color: green;
 }
-tbody td .checked span:last-of-type {
+tbody td .checked span:nth-of-type(2) {
   color: red;
 }
 
@@ -98,6 +102,7 @@ tbody .freq span {
 }
 
 .bottons {
+  width: 100%;
   display: flex;
   gap: 20px;
   justify-content: center;

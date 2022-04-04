@@ -228,7 +228,7 @@ clearBtn.onclick = function () {
   everyCell.forEach((cell) => {
     cell.value = "";
   });
-  let allTrFa = document.querySelectorAll(".right , .wrong");
+  let allTrFa = document.querySelectorAll(".right , .wrong , .where");
   let inputed = document.querySelectorAll(".inputed");
   inputed.forEach((input) => {
     input.innerHTML = "";
